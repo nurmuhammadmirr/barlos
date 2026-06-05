@@ -59,7 +59,7 @@ export default function App() {
       Синхронизация с сервером...
     </p>
     <p className="text-stone-400/60 text-[10px] font-light italic max-w-xs">
-      (На бесплатном тарифе Render сервер просыпается около 1 минуты)
+      (подождите чуть-чуть!)
     </p>
   </div>
 ) : messages.length === 0 ? (

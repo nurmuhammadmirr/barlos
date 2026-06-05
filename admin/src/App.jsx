@@ -52,12 +52,17 @@ export default function App() {
         </div>
 
         {loading ? (
-          <div className="bg-white rounded-3xl border border-slate-200 p-16 text-center shadow-sm">
-            <p className="text-slate-500 text-lg">
-              Загрузка данных...
-            </p>
-          </div>
-        ) : messages.length === 0 ? (
+  <div className="bg-white rounded-3xl border border-slate-200 p-24 text-center shadow-sm flex flex-col items-center justify-center gap-4">
+    {/* Изящный анимированный круговой лоадер */}
+    <div className="w-10 h-10 border-2 border-stone-200 border-t-amber-600 rounded-full animate-spin" />
+    <p className="text-stone-400 text-sm font-light tracking-widest uppercase animate-pulse mt-2">
+      Синхронизация с сервером...
+    </p>
+    <p className="text-stone-400/60 text-[10px] font-light italic max-w-xs">
+      (На бесплатном тарифе Render сервер просыпается около 1 минуты)
+    </p>
+  </div>
+) : messages.length === 0 ? (
           <div className="bg-white rounded-3xl border border-slate-200 p-16 text-center shadow-sm">
             <p className="text-slate-500 text-lg">
               Заявок пока нет
